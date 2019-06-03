@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\UnBreakable\WpfControlLibrary1\obj\Debug\
+C:\Users\Hitachiin-Sama\Documents\GitHub\UnBreakable\WpfControlLibrary1\obj\Debug\
 WpfControlLibrary1
 none
 false
@@ -16,5 +16,5 @@ DEBUG;TRACE
 13738642453
 Page1.xaml;UserControl1.xaml;
 
-False
+True
 
