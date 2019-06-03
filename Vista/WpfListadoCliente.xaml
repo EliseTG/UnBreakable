@@ -33,7 +33,7 @@
             </Grid>
         </GroupBox>
         <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="171,364,0,0" VerticalAlignment="Top" Width="75" FontWeight="Normal"  Click="btnEliminar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
-        <Button x:Name="btnRefrescar" HorizontalAlignment="Left" Margin="471,360,0,0" VerticalAlignment="Top" Width="40" Click="btnRefresh_Click" Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Height="39" BorderBrush="Black">
+        <Button x:Name="btnRefrescar" HorizontalAlignment="Left" Margin="471,360,0,0" VerticalAlignment="Top" Width="40" Click="btnRefresh_Click" Style="{DynamicResource MahApps.Metro.Styles.MetroCircleButtonStyle}" Height="39" BorderBrush="Black" >
             <Button.Background>
                 <ImageBrush ImageSource="Command-Refresh.png"/>
             </Button.Background>
