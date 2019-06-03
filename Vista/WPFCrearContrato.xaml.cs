@@ -71,21 +71,22 @@ namespace Vista
         //METODO CALCULO
         public double calculo()
         {
-            ModalidadServicio mod = new ModalidadServicio();
-            double valorc = mod.ValorBase + double.Parse(txtNumeroAsistentes.Text)
+            //ModalidadServicio mod = new ModalidadServicio();
+            double valorc = double.Parse(lblValorBase.Content.ToString())
             + double.Parse(lblAsistentes.Content.ToString())
             + double.Parse(lblPersonalAdicional.Content.ToString());
+
+            lblTotal.Content = valorc.ToString("$###,###,###.##");
             return valorc;
         }
 
-    
+
         //BOTON CALCULO CONTRATO
 
         private async void btnCalculo_Click(object sender, RoutedEventArgs e)
         {
             try
             {
- 
                 lblTotal.Content =calculo();
             }
             catch (Exception ex)
@@ -901,7 +902,7 @@ namespace Vista
 
                 }
                 double v = (n * uf);
-               lblAsistentes.Content = v.ToString();
+               lblAsistentes.Content = v.ToString("$###,###,###.##");
             }
             else
             {
@@ -966,7 +967,7 @@ namespace Vista
                 }
 
                 double v = (double)(cant_uf * uf);
-                lblPersonalAdicional.Content = v.ToString();
+                lblPersonalAdicional.Content = v.ToString("$###,###,###.##");
             }
             //else
             //{
@@ -998,6 +999,46 @@ namespace Vista
 
         }
 
-       
+        private void cbModalidad_LostFocus(object sender, SelectionChangedEventArgs e)
+        {
+            if (cbModalidad.SelectedItem != null)
+            {
+                string moda = ((comboBoxItem2)cbModalidad.SelectedItem).id;
+                int cant = 0;
+
+                if (moda.Equals("CB001"))
+                {
+                    cant = 3;
+                }
+                if (moda.Equals("CB002"))
+                {
+                    cant = 8;
+                }
+                if (moda.Equals("CB003"))
+                {
+                    cant = 12;
+                }
+                if (moda.Equals("CE001"))
+                {
+                    cant = 25;
+                }
+                if (moda.Equals("CE002"))
+                {
+                    cant = 35;
+                }
+                if (moda.Equals("CO001"))
+                {
+                    cant = 6;
+                }
+                if (moda.Equals("CO002"))
+                {
+                    cant = 10;
+                }
+
+                double valor = (double)(cant * uf);
+                lblValorBase.Content = valor.ToString("$###,###,###.##");
+            }
+            
+        }
     }
 }

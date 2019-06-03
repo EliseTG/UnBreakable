@@ -16,7 +16,7 @@
             <ColumnDefinition Width="238*"/>
             <ColumnDefinition Width="15*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnPasar" Content="Traspasar" HorizontalAlignment="Left" Margin="68,364,0,0" VerticalAlignment="Top" Width="73" FontWeight="Normal" Click="btnPasar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
+        <Button x:Name="btnPasar" Content="Traspasar" HorizontalAlignment="Left" Margin="688,510,-727,-114" VerticalAlignment="Top" Width="73" FontWeight="Normal" Click="btnPasar_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}" Grid.Column="1"/>
         <DataGrid x:Name="dgLista" HorizontalAlignment="Left" Margin="57,171,0,0" VerticalAlignment="Top" Height="173" Width="450"/>
         <Button x:Name="btnSalir" Content="Salir" HorizontalAlignment="Left" Margin="374,364,0,0" VerticalAlignment="Top" Width="75"  FontWeight="Normal" Click="btnSalir_Click" Controls:ButtonHelper.PreserveTextCase="True" RenderTransformOrigin="1.662,0.727" Style="{StaticResource AccentedSquareButtonStyle}"/>
         <GroupBox x:Name="gbFiltrar" Header="Filtrar Información" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Height="144" Width="450">
